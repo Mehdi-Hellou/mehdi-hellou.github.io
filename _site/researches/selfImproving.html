@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="http://localhost:4000/researches/selfImproving.html" /><!-- Title, description, author --><title>Self-improving agent in a complex environment | Mehdi Hellou - Portfolio</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Mehdi Hellou" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Self-improving agent in a complex environment | Mehdi Hellou - Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/avatar.jpg" />
+  <meta property="og:url" content="http://localhost:4000/researches/selfImproving.html" />
+  <meta property="og:site_name" content="Mehdi Hellou" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/assets/js/skel.min.js" defer></script>
+  <script src="/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/assets/js/main.js" defer></script>
+
+</head><body><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="http://localhost:4000/" id="home-link">
+    <span class="image avatar48"><img src="/assets/images/avatar.jpg" alt="Avatar of Mehdi Hellou" /></span>
+    <h1 id="title">Mehdi Hellou</h1>
+    <p>Portfolio</p>
+  </a>
+</div><!-- Nav -->
+<nav id="nav">
+  <ul><li><a href="http://localhost:4000/" id="home-page-link">
+            <span class="icon fa-home">Home page</span>
+          </a></li><li><a href="http://localhost:4000/research.html" id="researches-link">
+            <span class="icon fa-pencil-alt">Researches</span>
+          </a></li><li><a href="http://localhost:4000/reading-list.html" id="publications-link">
+            <span class="icon fa-book">Publications</span>
+          </a></li></ul>
+</nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://github.com/Mehdi-Hellou" class="icon-b fa-github"><span class="label">GitHub</span></a></li><!--<li><a href="mailto:your-email@example.com" class="icon fa-envelope"><span class="label">Email</span></a></li>--><li><a href="https://scholar.google.com/citations?user=7lWDaU4AAAAJ" class="icon fa-graduation-cap"><span class="label">Google Scholar</span></a></li></ul>
+</div>
+</div>
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2>Self-improving agent in a complex environment</h2></header><p>During my second Master’s degree in AI at Sorbonne University, I participated in a school project where we had to read a scientific article about AI methods used in robotics. Our task was to replicate the methods used in the article and compare our results with those presented in the paper. The article<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> focused on using reinforcement learning methods, such as adaptive heuristic critique (AHC) learning architecture<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> and Q-learning<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>, in a complex simulated environment. The simulated environment consisted of an agent, enemies, food, and obstacles, with the agent’s goal being to survive by using its sensors to avoid enemies and obstacles while collecting food.</p>
+
+<p>To complete the project, we had to create the environment, the characters (agent and enemies), and the agent’s sensors using coarse coding<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> and the Python GUI toolkit Tkinter. We also had to adjust the characters’ movements to be compatible with the Tkinter GUI. Once that was done, we implemented the Q-Learning method using a neural network to enable the agent to choose its movements autonomously, similar to the Deep-Q reinforcement learning models. The neural network had three layers: an input layer (145 neurons) that received input from the agent’s sensors, a hidden layer (30 neurons), and an output layer (1 neuron) corresponding to the Q-Value. Finally, we compared our results, represented by the learning curves, with those presented in the paper.</p>
+
+<div class="row">
+      <div class="item">
+        <a href="#" class="image fit"><img src="/assets/images/iar_results_project.jpg" alt="Ipsum Feugiat" /></a>
+        <header>
+          <h4>Figure - Learning curves showing the average number of resources eaten by the agent during 300 plays with and without using experience replay (blue and green curves, respectively).</h4>
+        </header>
+    </div>
+</div>
+<p>The above learning curves show how well the agent performed during 300 training simulations. Over time, the agent learns to collect resources while avoiding enemy encounters. To help you understand how we built the simulation, we have included a short demo that demonstrates the agent’s performance.</p>
+<div style="display: flex; justify-content: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zwqWOYN6X7c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p><br /></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Long-Ji Lin. 1992. Self-Improving Reactive Agents Based on Reinforcement Learning, Planning and Teaching. Mach. Learn. 8, 3–4 (May 1992), 293–321. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Richard Stuart Sutton.Temporal Credit Assignment in Reinforcement Learning. PhD thesis, 1984. AAI8410337. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Sutton, Richard &amp; Barto, Andrew. (1990). Time-Derivative Models of Pavlovian Reinforcement. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Watkins, C. J. C. H.. “Learning from Delayed Rewards.” PhD diss., King’s College, Oxford, 1989. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>D. E. Rumelhart, G. E. Hinton, and R. J. Williams. 1986. Learning internal representations by error propagation. Parallel distributed processing: explorations in the microstructure of cognition, vol. 1: foundations. MIT Press, Cambridge, MA, USA, 318–362. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+	</article>
+</div><!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;Mehdi Hellou. All rights reserved.</li>
+    
+    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    <li>Jekyll integration: <a href="https://chrisbobbe.github.io/">Chris Bobbe</a></li>
+  </ul>
+  
+</div></body>
+</html>

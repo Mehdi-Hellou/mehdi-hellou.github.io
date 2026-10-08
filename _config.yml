@@ -1,75 +1,121 @@
-# Developer's Note: This is a sample _config.yml file offered with
-# jekyll-theme-prologue for your convenience. To use it, move it to your
-# project's root directory. Please note that the following lines are
-# NECESSARY for Prologue to work correctly:
-#
-# theme: jekyll-theme-prologue
-# collections: [sections]
-#
-# They activate the theme and tell Jekyll to find your homepage content
-# in /_sections. Note where "sections" starts with an underscore
-# and where it doesn't. The social settings will make links to
-# Twitter, etc., but only if you give the URL.
-#
-# Also, be sure to customize url and baseurl for your site.
-#
-# ---------------------------------------------------------------
-#
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Mehdi Hellou
-subtitle: Portfolio
-description: >- # this means to ignore newlines until "baseurl:"
-  This is the demo site for a Jekyll theme version of
-  HTML5 UP's sleek, responsive site template Prologue.
-author: Mehdi Hellou
+# ============================================================
+# STEP 1: Your Identity (required)
+# ============================================================
+name: "Mehdi Hellou"
+title: "Research Fellow"
+institution: "COROLAB, University of Manchester"
 email: 
-avatar: assets/images/avatar.jpg
+photo: avatar.jpg  # place your photo in images/
 
-# You'll want to customize url and baseurl for your own site:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mehdi-hellou.github.io" # the base hostname & protocol for your site
+# ============================================================
+# STEP 2: Your Links (optional -- leave blank to hide an icon)
+# ============================================================
+links:
+  google_scholar: "https://scholar.google.com/citations?user=7lWDaU4AAAAJ"
+  github: "https://github.com/Mehdi-Hellou"
+  researchgate: ""
+  orcid: ""
+  twitter: ""
+  linkedin: ""
+  cv: ""  # e.g., "papers/cv.pdf"
 
-# Social settings
-# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
-twitter_url:
-facebook_url:
-googleplus_url:
-instagram_url:
-linkedin_url:
-github_url: https://github.com/Mehdi-Hellou
-stackoverflow_url:
-pinterest_url:
-slack_url:
-dribbble_url:
-googlescholar_url: https://scholar.google.com/citations?user=7lWDaU4AAAAJ
+# ============================================================
+# STEP 3: Site Settings
+# ============================================================
+accent_color: "#1a7a6d"      # theme color; light and dark variants are derived automatically
+dark_mode: true              # set to false to disable dark mode entirely
+math: false                  # true loads MathJax on every page; or add `math: true` to individual pages
+description: "Mehdi Hellou, researcher in Robotics and AI at the Cognitive Robotics Lab (COROLAB), University of Manchester."
 
-# Google Analytics Tracking ID goes here:
-google_analytics:
+# When deploying with the included GitHub Actions workflow these are filled
+# in automatically from your Pages settings (user site, project site, or
+# custom domain). Set them only if you host the site somewhere else.
+url: ""
+baseurl: ""
 
-# The following settings are NECESSARY for the Prologue theme to run:
-#theme: jekyll-theme-prologue
-remote_theme: chrisbobbe/jekyll-theme-prologue
-collections:
-  sections:
-  researches:
-    output: true
+# Analytics -- fill in whichever service you use; leave the rest blank.
+analytics:
+  google_id: ""          # Google Analytics 4 measurement ID, e.g. G-XXXXXXXXXX
+  plausible_domain: ""   # Plausible: your site's domain, e.g. jsmith.github.io
+  umami_website_id: ""   # Umami: website ID (and umami_src if self-hosted)
+  umami_src: ""          #   default https://cloud.umami.is/script.js
+  goatcounter: ""        # GoatCounter: your code, e.g. jsmith (for jsmith.goatcounter.com)
 
-exclude: ["script", "vendor", ".idea", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json"]
+# ============================================================
+# STEP 4: Choose Your Pages (comment out any you don't need)
+# ============================================================
+# Each name is a page in _pages/. Add `label: Papers` to change the
+# navbar text without changing the URL.
+nav_pages:
+  - name: about
+  - name: research
+  - name: publications
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["footnotes"]
+# ============================================================
+# STEP 5: Publications (assets/ref.bib)
+# ============================================================
+# Your name is bolded in the publication list. Write it exactly as it
+# appears in the rendered list ("Last, F. M."); list the longest form first.
+scholar:
+  last_name: Hellou
+  first_name: ["M."]
+  style: citesty
+  locale: en
+  source: /assets/
+  bibliography: ref.bib
+  bibliography_template: bibtemplate
+  sort_by: year, month
+  order: descending
+  replace_strings: true
+  join_strings: true
+  query: "@*"
+  bibliography_list_attributes:
+    reversed: "reversed"
+  # Template-only fields, kept out of the copyable BibTeX
+  bibtex_skip_fields: [abstract, month_numeric, file, selected, code, slides, video, poster, data]
+
+# ============================================================
+# Advanced Settings (you probably don't need to change these)
+# ============================================================
+permalink: /blog/:year/:title/
+
+include:
+  - _pages
+
+sass:
+  style: compressed
+  quiet_deps: true                # hide warnings from vendored Bootstrap SCSS
+  silence_deprecations: [import]  # Bootstrap 5.3 still uses @import
+  sourcemap: development          # no .map file in production builds
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true
+
+plugins: ["jekyll/scholar", "jekyll-sitemap"]
+
+# Repository files that should not be published to the site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - UPGRADING.md
+  - LICENSE
+  - setup.sh
+  - images/screenshots
+  - vendor
+  - .bundle
+  - node_modules
