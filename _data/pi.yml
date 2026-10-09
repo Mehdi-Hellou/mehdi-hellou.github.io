@@ -1,10 +1,10 @@
 # Education shown on the About page (`education`) and in the home-page sidebar (`educationshort`).
 # Years were not on the previous site, so none are listed; prefix entries with "(2019) " to add them.
 - education:
-    - "PhD, University of Manchester"
-    - "Master's in Computer Science, Sorbonne University (Pierre and Marie Curie)"
-    - "Master of Engineering in Robotics, Polytech Sorbonne University"
+    - "(2025) PhD, University of Manchester"
+    - "(2020) Master's in Computer Science, Sorbonne University (Pierre and Marie Curie)"
+    - "(2019) Master of Engineering in Robotics, Polytech Sorbonne University"
   educationshort:
-    - "PhD, University of Manchester"
-    - "MSc Computer Science, Sorbonne University"
-    - "MEng Robotics, Polytech Sorbonne"
+    - "(2025) PhD, University of Manchester"
+    - "(2020) MSc Computer Science, Sorbonne University"
+    - "(2019) MEng Robotics, Polytech Sorbonne"
